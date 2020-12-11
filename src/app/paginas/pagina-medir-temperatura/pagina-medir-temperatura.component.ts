@@ -96,6 +96,7 @@ export class PaginaMedirTemperaturaComponent implements OnInit {
       html: 'Por favor, espere',
       timerProgressBar: true,
       allowOutsideClick: false,
+      showConfirmButton: false,
       onBeforeOpen: () => {
         Swal.showLoading()
       }

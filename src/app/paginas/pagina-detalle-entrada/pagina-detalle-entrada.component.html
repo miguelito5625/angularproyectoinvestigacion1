@@ -1,9 +1,9 @@
 <div class="card">
     <div class="card-body">
-        <h5 class="card-title">Temperatura de {{cantidadPersonas}} persona(s)</h5>
+        <h5 class="card-title">Creado {{detalleEntrada.creadaHace}}</h5>
 
         <ul class="list-group list-group-flush mt-4">
-            <li class="list-group-item" *ngFor="let persona of listaPersonas" style="padding: 0; margin-top: 10px;">
+            <li class="list-group-item" *ngFor="let persona of detalleEntrada.personas" style="padding: 0; margin-top: 10px;">
                 
                     <div class="d-flex justify-content-between" style="width: 100%; margin: 0;">
                       <div class="align-self-center">
@@ -13,10 +13,10 @@
                         <a>{{persona.temp}} °C</a>
                       </div>
                       
-                      <button type="button" class="btn btn-raised btn-success btn-small text-right" 
+                      <!-- <button type="button" class="btn btn-raised btn-success btn-small text-right" 
                       [ngClass]="listaPersonas[persona.indice].temp > 37.5? 'btn btn-raised btn-danger btn-small text-right' : 'btn btn-raised btn-success btn-small text-right'"
                       
-                      (click)="getPersonTemp(persona.indice)">scan</button>
+                      (click)="getPersonTemp(persona.indice)">scan</button> -->
 
                     </div>
 
@@ -27,9 +27,9 @@
         </ul>
 
         
-        <div class="d-flex flex-row-reverse mt-2" *ngIf="escaneoFinalizado()">
+        <!-- <div class="d-flex flex-row-reverse mt-2" *ngIf="escaneoFinalizado()">
           <button class="btn btn-raised btn-primary" (click)="finalizarObtencionTemperatura()">Siguiente</button>
-        </div>
+        </div> -->
 
     </div>
 </div>

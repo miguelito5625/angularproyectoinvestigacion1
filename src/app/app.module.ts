@@ -15,6 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from 'src/environments/environment';
+import { PaginaDetalleEntradaComponent } from './paginas/pagina-detalle-entrada/pagina-detalle-entrada.component';
+import { PaginaDetalleSalidaComponent } from './paginas/pagina-detalle-salida/pagina-detalle-salida.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { environment } from 'src/environments/environment';
     PaginaListaElegirEntsalComponent,
     PaginaListaEntradasComponent,
     PaginaListaSalidasComponent,
-    PaginaMedirTemperaturaComponent
+    PaginaMedirTemperaturaComponent,
+    PaginaDetalleEntradaComponent,
+    PaginaDetalleSalidaComponent
   ],
   imports: [
     BrowserModule,

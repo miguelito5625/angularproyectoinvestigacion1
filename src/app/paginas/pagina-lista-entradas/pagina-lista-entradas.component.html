@@ -1,7 +1,13 @@
+<h3>Registros de entradas</h3>
 <ul class="list-group">
-    <li class="list-group-item">Cras justo odio</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Morbi leo risus</li>
-    <li class="list-group-item">Porta ac consectetur ac</li>
-    <li class="list-group-item">Vestibulum at eros</li>
-  </ul><p>pagina-lista-entradas works!</p>
+  <li class="list-group-item" *ngFor="let entrada of listaEntradas; let i = index" (click)="paginaDetalleEntrada(entrada)"
+  [ngClass]="entrada.estado == 'Sin Posible Covid-19' ? 'list-group-item list-group-item-success' : 'list-group-item list-group-item-danger'"
+  >
+
+    <div class="row d-flex justify-content-between">
+      <div class="text-left">{{i+1}}. Personas:{{entrada.cantidadPersonas}} </div>
+      <div class="text-right">{{formatearFecha(entrada.fechaHora)}}</div>
+    </div>
+
+  </li>
+</ul>

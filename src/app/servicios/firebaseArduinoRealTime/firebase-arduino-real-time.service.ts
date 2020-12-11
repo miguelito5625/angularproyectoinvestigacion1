@@ -8,8 +8,10 @@ import { AngularFireDatabase, AngularFireList, AngularFireObject } from '@angula
 })
 export class FirebaseArduinoRealTimeService {
 
-  registrosEntradas: any = [];
-  registrosSalidas: any = [];
+  detalleEntrada:any;
+
+  // registrosEntradas: any = [];
+  // registrosSalidas: any = [];
 
   private dbPath = '/';
   private rutaDatosArduino = '/proyecto/arduino';

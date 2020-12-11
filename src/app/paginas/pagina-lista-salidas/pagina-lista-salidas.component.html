@@ -1,1 +1,11 @@
-<p>pagina-lista-salidas works!</p>
+<h3>Registros de salidas</h3>
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let salida of listaSalidas; let i = index">
+
+    <div class="row d-flex justify-content-between">
+      <div class="text-left">{{i+1}}. Personas:{{salida.cantidadPersonas}} </div>
+      <div class="text-right">{{formatearFecha(salida.fechaHora)}}</div>
+    </div>
+
+  </li>
+</ul>
